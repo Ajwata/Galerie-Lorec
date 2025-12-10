@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Impressum | Galerie Lorec</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Header -->
+	<header class="header">
+		<div class="container header__container">
+			<div class="header__logo">
+				<img src="assets/logo.png" alt="Galerie Lorec" class="logo">
+			</div>
+
+			<div class="header__logo-mobile">
+				<img src="assets/logo.png" alt="Galerie Lorec" class="logo">
+			</div>
+
+			<nav class="nav" id="mainNav" aria-label="Hauptnavigation">
+				<div class="nav__content">
+					<div class="nav__top">
+						<div class="nav__brand">
+							<img src="assets/logo.png" alt="Galerie Lorec" class="logo nav__logo">
+						</div>
+						<button class="nav__close-btn" id="closeMenuBtn" aria-label="Menü schließen">
+							<i class="fas fa-times"></i>
+						</button>
+					</div>
+
+					<ul class="nav__list">
+						<li class="nav__item"><a href="index.html#home" class="nav__link">Startseite</a></li>
+						<li class="nav__item"><a href="index.html#what-we-buy" class="nav__link">Ankauf</a></li>
+						<li class="nav__item"><a href="index.html#why-choose-us" class="nav__link">Über uns</a></li>
+						<li class="nav__item"><a href="index.html#how-it-works" class="nav__link">So funktioniert's</a></li>
+						<li class="nav__item"><a href="index.html#contact" class="nav__link">Kontakt</a></li>
+					</ul>
+
+					<div class="nav__contact">
+						<a href="tel:+4366493413025" class="nav__phone">
+							<i class="fas fa-phone-alt"></i>
+							+43 664 93413025
+						</a>
+						<a href="index.html#evaluation-form" class="btn btn--small">Kostenlose Bewertung</a>
+					</div>
+				</div>
+			</nav>
+
+			<div class="header__actions">
+				<a href="tel:+4366493413025" class="nav__phone">
+					<i class="fas fa-phone-alt"></i>
+					+43 664 93413025
+				</a>
+				<a href="index.html#evaluation-form" class="btn btn--small">Kostenlose Bewertung</a>
+			</div>
+
+			<button class="header__menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">
+				<span class="menu-btn__line"></span>
+				<span class="menu-btn__line"></span>
+				<span class="menu-btn__line"></span>
+			</button>
+		</div>
+		<div class="nav__overlay" id="navOverlay"></div>
+	</header>
+
+	<main class="legal" id="top">
+		<div class="legal__hero">
+			<div class="container legal__hero-content">
+				<p class="legal__eyebrow">Rechtliche Hinweise</p>
+				<h1 class="legal__title">Impressum</h1>
+				<p class="legal__subtitle">Gesetzliche Anbieterkennzeichnung gemäß § 5 ECG und Offenlegung nach § 25 MedienG.</p>
+			</div>
+		</div>
+
+		<section class="legal__section">
+			<div class="container legal__content">
+				<div class="legal__card">
+					<div class="legal__meta">
+						<span><i class="fas fa-building"></i> Fa Lorec e.U.</span>
+						<span><i class="fas fa-calendar-check"></i> Stand: 2025</span>
+						<span><i class="fas fa-map-marker-alt"></i> Wien, Österreich</span>
+					</div>
+					<div class="legal__text" id="impressumText">
+						<!-- Company Information -->
+						<div class="legal__section-block">
+							<div class="legal__icon-header">
+								<div class="legal__icon-circle">
+									<i class="fas fa-building"></i>
+								</div>
+								<h2>Unternehmensangaben</h2>
+							</div>
+							<div class="contact-card">
+								<div class="contact-card__item">
+									<div class="contact-card__icon">
+										<i class="fas fa-store"></i>
+									</div>
+									<div class="contact-card__content">
+										<div class="contact-card__label">Firmenname</div>
+										<div class="contact-card__value">Fa Lorec e.U.</div>
+									</div>
+								</div>
+								<div class="contact-card__item">
+									<div class="contact-card__icon">
+										<i class="fas fa-user-tie"></i>
+									</div>
+									<div class="contact-card__content">
+										<div class="contact-card__label">Inhaber</div>
+										<div class="contact-card__value">Lozan Jovanovic</div>
+									</div>
+								</div>
+								<div class="contact-card__item">
+									<div class="contact-card__icon">
+										<i class="fas fa-map-marker-alt"></i>
+									</div>
+									<div class="contact-card__content">
+										<div class="contact-card__label">Firmensitz & Adresse</div>
+										<div class="contact-card__value">Favoritenstraße 235B/30/8<br>1100 Wien, Österreich</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Contact Information -->
+						<div class="legal__section-block">
+							<div class="legal__icon-header">
+								<div class="legal__icon-circle">
+									<i class="fas fa-phone"></i>
+								</div>
+								<h2>Kontaktdaten</h2>
+							</div>
+							<div class="contact-card">
+								<div class="contact-card__item">
+									<div class="contact-card__icon">
+										<i class="fas fa-phone-alt"></i>
+									</div>
+									<div class="contact-card__content">
+										<div class="contact-card__label">Telefon</div>
+										<div class="contact-card__value"><a href="tel:+432236378919">+43 2236 378919</a></div>
+									</div>
+								</div>
+								<div class="contact-card__item">
+									<div class="contact-card__icon">
+										<i class="fas fa-mobile-alt"></i>
+									</div>
+									<div class="contact-card__content">
+										<div class="contact-card__label">Mobil</div>
+										<div class="contact-card__value"><a href="tel:+4366493413025">+43 664 93413025</a></div>
+									</div>
+								</div>
+								<div class="contact-card__item">
+									<div class="contact-card__icon">
+										<i class="fas fa-envelope"></i>
+									</div>
+									<div class="contact-card__content">
+										<div class="contact-card__label">E-Mail</div>
+										<div class="contact-card__value"><a href="mailto:office@galerie-lorec.at">office@galerie-lorec.at</a></div>
+									</div>
+								</div>
+								<div class="contact-card__item">
+									<div class="contact-card__icon">
+										<i class="fas fa-globe"></i>
+									</div>
+									<div class="contact-card__content">
+										<div class="contact-card__label">Website</div>
+										<div class="contact-card__value"><a href="https://www.galerie-lorec.at" target="_blank" rel="noopener">www.galerie-lorec.at</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Legal Information -->
+						<div class="legal__section-block">
+							<div class="legal__icon-header">
+								<div class="legal__icon-circle">
+									<i class="fas fa-certificate"></i>
+								</div>
+								<h2>Rechtliche Angaben</h2>
+							</div>
+							<div class="info-grid">
+								<div class="info-grid__item">
+									<div class="info-grid__label">
+										<i class="fas fa-id-card"></i>
+										UID-Nummer
+									</div>
+									<div class="info-grid__value">ATU66818768</div>
+								</div>
+								<div class="info-grid__item">
+									<div class="info-grid__label">
+										<i class="fas fa-briefcase"></i>
+										Gewerbe
+									</div>
+									<div class="info-grid__value">An- und Verkauf von Gold, Antiquitäten, Luxusuhren und anderen Wertgegenständen</div>
+								</div>
+								<div class="info-grid__item">
+									<div class="info-grid__label">
+										<i class="fas fa-handshake"></i>
+										Mitgliedschaft
+									</div>
+									<div class="info-grid__value">Wirtschaftskammer Österreich (WKÖ)</div>
+								</div>
+								<div class="info-grid__item">
+									<div class="info-grid__label">
+										<i class="fas fa-shield-alt"></i>
+										Aufsichtsbehörde
+									</div>
+									<div class="info-grid__value">Magistratisches Bezirksamt Wien</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Liability for Content -->
+						<div class="legal__section-block">
+							<div class="legal__icon-header">
+								<div class="legal__icon-circle">
+									<i class="fas fa-file-contract"></i>
+								</div>
+								<h2>Haftung für Inhalte</h2>
+							</div>
+							<p>Wir haben die Inhalte unserer Seiten mit größter Sorgfalt erstellt. Hinsichtlich der Richtigkeit, Vollständigkeit und Aktualität unserer Inhalte können wir jedoch keine Gewähr übernehmen. Als Webseitenbetreiber sind wir für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich.</p>
+							<p>Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine Haftung ist erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.</p>
+						</div>
+
+						<!-- Liability for Links -->
+						<div class="legal__section-block">
+							<div class="legal__icon-header">
+								<div class="legal__icon-circle">
+									<i class="fas fa-link"></i>
+								</div>
+								<h2>Haftung für Links</h2>
+							</div>
+							<p>Unsere Website enthält Links zu externen Webseiten Dritter. Da wir auf deren Inhalte keinen Einfluss haben, können wir für diese fremden Inhalte keine Gewähr übernehmen. Verantwortlich für die Inhalte verlinkter Seiten ist stets der jeweilige Anbieter oder Betreiber.</p>
+							<p>Wir prüfen verlinkte Seiten zum Zeitpunkt der Verlinkung auf mögliche Rechtsverletzungen. In diesem Moment waren keine rechtswidrigen Inhalte bekannt. Eine permanente Kontrolle ohne konkrete Anhaltspunkte ist unzumutbar. Bei Bekanntwerden von Rechtsverletzungen entfernen wir die entsprechenden Links unverzüglich.</p>
+						</div>
+
+						<!-- Copyright -->
+						<div class="legal__section-block">
+							<div class="legal__icon-header">
+								<div class="legal__icon-circle">
+									<i class="fas fa-copyright"></i>
+								</div>
+								<h2>Urheberrecht</h2>
+							</div>
+							<p>Die von den Betreibern erstellten Inhalte und Werke auf dieser Website unterliegen dem Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Vervielfältigung, Verbreitung, Bearbeitung oder sonstige Nutzung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung des jeweiligen Autors.</p>
+							<p>Downloads und Kopien dieser Website sind nur für den privaten Gebrauch erlaubt. Eine kommerzielle Nutzung ist nicht gestattet. Wir achten auf die Urheberrechte anderer und verwenden vorzugsweise eigene oder lizenzfreie Werke.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__content">
+				<div class="footer__main">
+					<div class="footer__logo">
+						<img src="assets/logo.png" alt="Galerie Lorec" class="footer-logo">
+						<p class="footer__description">Ihr zuverlässiger Partner für den fairen Ankauf von Luxusgütern in Wien.</p>
+					</div>
+					
+					<div class="footer__links">
+						<div class="footer__column">
+							<h5>Leistungen</h5>
+							<ul>
+								<li><a href="index.html#what-we-buy">Goldankauf</a></li>
+								<li><a href="index.html#what-we-buy">Uhrenankauf</a></li>
+								<li><a href="index.html#what-we-buy">Pelzankauf</a></li>
+							</ul>
+						</div>
+						
+						<div class="footer__column">
+							<h5>Unternehmen</h5>
+							<ul>
+								<li><a href="index.html#why-choose-us">Über uns</a></li>
+								<li><a href="index.html#how-it-works">So funktioniert's</a></li>
+								<li><a href="index.html#contact">Kontakt</a></li>
+								<li><a href="Impressum.html">Impressum</a></li>
+								<li><a href="datenschutz.html">Datenschutz</a></li>
+							</ul>
+						</div>
+						
+						<div class="footer__column">
+							<h5>Kontakt</h5>
+							<p><i class="fas fa-phone"></i> +43 664 93413025</p>
+							<p><i class="fas fa-envelope"></i> office@galerie-lorec.at</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="footer__bottom">
+					<p class="copyright">&copy; 2025 Fa Lorec e.U. Alle Rechte vorbehalten.</p>
+					<div class="footer__badges">
+						<span class="badge">
+							<i class="fas fa-shield-alt"></i>
+							Sichere Transaktionen
+						</span>
+						<span class="badge">
+							<i class="fas fa-check-circle"></i>
+							Zertifizierte Bewertung
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- WhatsApp Floating Button -->
+	<a href="https://wa.me/4366493413025" class="whatsapp-float" target="_blank">
+		<i class="fab fa-whatsapp"></i>
+	</a>
+
+	<script src="script.js"></script>
+</body>
+</html>

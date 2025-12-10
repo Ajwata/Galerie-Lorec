@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Lorec - Ankauf von Gold, Pelzen und Uhren in Österreich</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <img src="assets/logo.png" alt="Galerie Lorec" class="logo">
+            </div>
+
+            <div class="header__logo-mobile">
+                <img src="assets/logo.png" alt="Galerie Lorec" class="logo">
+            </div>
+
+            <nav class="nav" id="mainNav" aria-label="Hauptnavigation">
+                <div class="nav__content">
+                    <div class="nav__top">
+                        <div class="nav__brand">
+                            <img src="assets/logo.png" alt="Galerie Lorec" class="logo nav__logo">
+                        </div>
+                        <button class="nav__close-btn" id="closeMenuBtn" aria-label="Menü schließen">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link">Startseite</a></li>
+                        <li class="nav__item"><a href="#what-we-buy" class="nav__link">Ankauf</a></li>
+                        <li class="nav__item"><a href="#why-choose-us" class="nav__link">Über uns</a></li>
+                        <li class="nav__item"><a href="#how-it-works" class="nav__link">So funktioniert's</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Kontakt</a></li>
+                    </ul>
+
+                    <div class="nav__contact">
+                        <a href="tel:+4366493413025" class="nav__phone">
+                            <i class="fas fa-phone-alt"></i>
+                            +43 664 93413025
+                        </a>
+                        <a href="#evaluation-form" class="btn btn--small">Kostenlose Bewertung</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+4366493413025" class="nav__phone">
+                    <i class="fas fa-phone-alt"></i>
+                    +43 664 93413025
+                </a>
+                <a href="#evaluation-form" class="btn btn--small">Kostenlose Bewertung</a>
+            </div>
+
+            <button class="header__menu-btn" id="mobileMenuBtn" aria-label="Menü öffnen">
+                <span class="menu-btn__line"></span>
+                <span class="menu-btn__line"></span>
+                <span class="menu-btn__line"></span>
+            </button>
+        </div>
+        <div class="nav__overlay" id="navOverlay"></div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__video">
+            <video autoplay muted loop playsinline>
+                <source src="assets/background.mp4" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
+            <div class="hero__overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Ankauf von Gold, Pelzen und Uhren in Österreich</h1>
+                <p class="hero__subtitle">Höchstpreise • Faire Bewertung • Sofortige Auszahlung</p>
+                <a href="#evaluation-form" class="btn btn--large">Kostenlose Bewertung</a>
+                
+                <div class="gold-price">
+                    <div class="gold-price__header">
+                        <h3 class="gold-price__title">
+                            <i class="fas fa-chart-line"></i>
+                            Aktueller Goldpreis
+                        </h3>
+                        <div class="gold-price__update">
+                            <span class="update-time" id="updateTime"></span>
+                            <button class="refresh-btn" id="refreshGoldPrice">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="gold-price__grid">
+                        <div class="gold-price__item">
+                            <div class="gold-price__label">999 Feingold</div>
+                            <div class="gold-price__value" id="gold-price-999">€ 61,23</div>
+                            <div class="gold-price__unit">pro Gramm</div>
+                        </div>
+                        
+                        <div class="gold-price__item">
+                            <div class="gold-price__label">585 Gold</div>
+                            <div class="gold-price__value" id="gold-price-585">€ 35,78</div>
+                            <div class="gold-price__unit">pro Gramm</div>
+                        </div>
+                        
+                        <div class="gold-price__item">
+                            <div class="gold-price__status">
+                                <span class="status-indicator active"></span>
+                                Live-Markt
+                            </div>
+                            <div class="gold-price__source">
+                                <i class="fas fa-database"></i>
+                                Echtzeit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Buy Section -->
+    <section class="section section--light" id="what-we-buy">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Was wir ankaufen</h2>
+                <p class="section__subtitle">Wir kaufen hochwertiges Gold, exklusive Pelze und Luxusuhren zu tagesaktuellen Spitzenpreisen</p>
+            </div>
+            
+            <div class="categories">
+                <!-- Gold -->
+                <div class="category-card">
+                    <div class="category-card__image">
+                        <div class="category-3d">
+                            <img src="assets/1.png" alt="Gold Ring" class="category-3d__item category-3d__item--ring">
+                            <img src="assets/5.png" alt="Gold Earring" class="category-3d__item category-3d__item--earring">
+                        </div>
+                    </div>
+                    <div class="category-card__content">
+                        <h3 class="category-card__title">Goldankauf</h3>
+                        <p class="category-card__text">Wir kaufen Gold, Schmuck, Altgold, Zahngold und Barren zu tagesaktuellen Spitzenpreisen.</p>
+                        <div class="category-tags">
+                            <span class="category-tag">Altgold</span>
+                            <span class="category-tag">Schmuckstücke</span>
+                            <span class="category-tag">Goldketten</span>
+                            <span class="category-tag">Ringe & Ohrringe</span>
+                            <span class="category-tag">Goldmünzen</span>
+                        </div>
+                        <a href="#evaluation-form" class="category-card__cta">Gold bewerten lassen</a>
+                    </div>
+                </div>
+                
+                <!-- Watches -->
+                <div class="category-card">
+                    <div class="category-card__image">
+                        <div class="category-3d">
+                            <img src="assets/6.png" alt="Luxus Uhr" class="category-3d__item category-3d__item--watch">
+                            <img src="assets/2.png" alt="Gold Earring" class="category-3d__item category-3d__item--earring">
+                        </div>
+                    </div>
+                    <div class="category-card__content">
+                        <h3 class="category-card__title">Uhrenankauf</h3>
+                        <p class="category-card__text">Wir kaufen Luxusuhren von renommierten Marken wie Rolex, Omega, Patek Philippe und mehr.</p>
+                        <div class="category-tags">
+                            <span class="category-tag">Rolex</span>
+                            <span class="category-tag">Omega</span>
+                            <span class="category-tag">Patek Philippe</span>
+                            <span class="category-tag">Audemars Piguet</span>
+                            <span class="category-tag">Breitling</span>
+                        </div>
+                        <a href="#evaluation-form" class="category-card__cta">Uhren bewerten lassen</a>
+                    </div>
+                </div>
+                
+                <!-- Fur -->
+                <div class="category-card">
+                    <div class="category-card__image">
+                        <div class="category-3d">
+                            <img src="assets/meh.png" alt="Luxus Uhr" class="category-3d__item category-3d__item--watch">
+                        </div>
+                    </div>
+                    <div class="category-card__content">
+                        <h3 class="category-card__title">Pelzankauf</h3>
+                        <p class="category-card__text">Wir kaufen hochwertige Pelzmäntel, Pelzjacken, Fuchspelze, Nerze und mehr – in jedem Zustand.</p>
+                        <div class="category-tags">
+                            <span class="category-tag">Nerz</span>
+                            <span class="category-tag">Fuchs</span>
+                            <span class="category-tag">Persianer</span>
+                            <span class="category-tag">Zobel</span>
+                            <span class="category-tag">Luchs</span>
+                        </div>
+                        <a href="#evaluation-form" class="category-card__cta">Pelze bewerten lassen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Why Choose Us Section -->
+    <section class="section" id="why-choose-us">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Über uns</h2>
+                <p class="section__subtitle">Galerie Lorec ist ein renommiertes Familienunternehmen in Wien, das sich auf den fairen Ankauf von Luxusgütern spezialisiert.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature__icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="feature__title">Präzise Bewertung</h3>
+                    <p class="feature__text">Transparente Bewertungen nach aktuellem Marktpreis durch unsere Experten.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature__icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h3 class="feature__title">Höchstpreise</h3>
+                    <p class="feature__text">Wir zahlen die besten Preise für Ihr Gold, Pelze und Uhren am Markt.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature__icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature__title">Sofortige Auszahlung</h3>
+                    <p class="feature__text">Bei Zustimmung erfolgt die Auszahlung umgehend in bar oder per Überweisung.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature__icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3 class="feature__title">Absolute Diskretion</h3>
+                    <p class="feature__text">Ihre Transaktion bleibt vertraulich - wir garantieren höchste Diskretion.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature__icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature__title">20+ Jahre Erfahrung</h3>
+                    <p class="feature__text">Langjährige Expertise im Ankauf von Luxusgütern in Wien.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="feature__title">Persönliche Beratung</h3>
+                    <p class="feature__text">Individuelle Betreuung durch unsere Fachspezialisten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section section--light" id="how-it-works">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">So funktioniert es</h2>
+                <p class="section__subtitle">Einfacher Prozess - professionelle Bewertung - schnelle Auszahlung</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step__number">1</div>
+                    <div class="step__icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="step__title">Foto senden</h3>
+                    <p class="step__text">Schicken Sie uns Fotos Ihres Gegenstandes per WhatsApp, E-Mail oder über das Formular.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step__number">2</div>
+                    <div class="step__icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="step__title">Kostenlose Bewertung</h3>
+                    <p class="step__text">Unsere Experten bewerten Ihr Stück innerhalb von 24 Stunden transparent.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step__number">3</div>
+                    <div class="step__icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="step__title">Sofortige Auszahlung</h3>
+                    <p class="step__text">Bei Zustimmung erhalten Sie umgehend Ihre Auszahlung - diskret und sicher.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evaluation Form Section -->
+    <section class="section" id="evaluation-form">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Kostenlose Bewertung</h2>
+                <p class="section__subtitle">Schicken Sie uns Ihre Unterlagen und erhalten Sie ein unverbindliches Angebot</p>
+            </div>
+            
+            <div class="form-container">
+                <form class="form" id="valuationForm">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name" class="form__label">
+                                <i class="fas fa-user"></i>
+                                Name *
+                            </label>
+                            <input type="text" id="name" class="form__input" placeholder="Ihr vollständiger Name" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="phone" class="form__label">
+                                <i class="fas fa-phone"></i>
+                                Telefon *
+                            </label>
+                            <input type="tel" id="phone" class="form__input" placeholder="+43 664 1234567" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="email" class="form__label">
+                            <i class="fas fa-envelope"></i>
+                            E-Mail
+                        </label>
+                        <input type="email" id="email" class="form__input" placeholder="ihre.email@beispiel.at">
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="category" class="form__label">
+                            <i class="fas fa-tag"></i>
+                            Kategorie *
+                        </label>
+                        <select id="category" class="form__select" required>
+                            <option value="">Bitte wählen</option>
+                            <option value="gold">Gold / Schmuck</option>
+                            <option value="watches">Uhren</option>
+                            <option value="fur">Pelze</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label class="form__label">
+                            <i class="fas fa-images"></i>
+                            Fotos hochladen
+                        </label>
+                        <div class="file-upload">
+                            <div class="file-upload__area" id="fileUploadArea">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Dateien hierher ziehen oder klicken</p>
+                                <span>JPG, PNG (max. 5 Dateien, 10MB)</span>
+                            </div>
+                            <input type="file" id="photos" accept="image/*" multiple>
+                            <div id="file-list" class="file-list"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="message" class="form__label">
+                            <i class="fas fa-comment"></i>
+                            Beschreibung (optional)
+                        </label>
+                        <textarea id="message" class="form__textarea" rows="4" placeholder="Beschreibung Ihres Gegenstandes..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--full">Zur Bewertung senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="section section--light" id="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Kontakt & Erreichbarkeit</h2>
+                <p class="section__subtitle">Wir sind für Sie da - persönlich, kompetent und diskret</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-info__title">Kontaktieren Sie uns</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item__icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-item__content">
+                                <h4>Telefon</h4>
+                                <p>+43 664 93413025</p>
+                                <a href="tel:+4366493413025" class="contact-link">Jetzt anrufen</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-item__content">
+                                <h4>E-Mail</h4>
+                                <p>Office@galerie-lorec.at</p>
+                                <a href="mailto:Office@galerie-lorec.at" class="contact-link">E-Mail senden</a>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                    
+                    <div class="contact-social">
+                        <a href="https://wa.me/4366493413025" class="social-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:Office@galerie-lorec.at" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+4366493413025" class="social-link">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__logo">
+                        <img src="assets/logo.png" alt="Galerie Lorec" class="footer-logo">
+                        <p class="footer__description">Ihr zuverlässiger Partner für den fairen Ankauf von Luxusgütern in Wien.</p>
+                    </div>
+                    
+                    <div class="footer__links">
+                        <div class="footer__column">
+                            <h5>Leistungen</h5>
+                            <ul>
+                                <li><a href="#what-we-buy">Goldankauf</a></li>
+                                <li><a href="#what-we-buy">Uhrenankauf</a></li>
+                                <li><a href="#what-we-buy">Pelzankauf</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer__column">
+                            <h5>Unternehmen</h5>
+                            <ul>
+                                <li><a href="#why-choose-us">Über uns</a></li>
+                                <li><a href="#how-it-works">So funktioniert's</a></li>
+                                <li><a href="#contact">Kontakt</a></li>
+                                <li><a href="Impressum.html">Impressum</a></li>
+                                <li><a href="datenschutz.html">Datenschutz</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer__column">
+                            <h5>Kontakt</h5>
+                            <p><i class="fas fa-phone"></i> +43 664 93413025</p>
+                            <p><i class="fas fa-envelope"></i> Office@galerie-lorec.at</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer__bottom">
+                    <p class="copyright">&copy; 2023 Galerie Lorec. Alle Rechte vorbehalten.</p>
+                    <div class="footer__badges">
+                        <span class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            Sichere Transaktionen
+                        </span>
+                        <span class="badge">
+                            <i class="fas fa-check-circle"></i>
+                            Zertifizierte Bewertung
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/4366493413025" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

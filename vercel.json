@@ -4,12 +4,6 @@
       "runtime": "vercel-php@0.6.0"
     }
   },
-  "routes": [
-    {
-      "src": "/fetch-oegussa-prices.php",
-      "dest": "/api/fetch-oegussa-prices.php"
-    }
-  ],
   "rewrites": [
     {
       "source": "/fetch-oegussa-prices.php",

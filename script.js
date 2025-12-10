@@ -51,33 +51,17 @@ class GoldPriceTracker {
         this.updateTimeElement = document.querySelector('.update-time');
         this.refreshButton = document.getElementById('refreshGoldPrice');
         
-        // Используем бесплатный публичный API Goldprice.org
+        // Используем PHP прокси для получения цен с Ögussa
         this.apis = [
             {
-                name: 'goldprice',
-                url: 'https://data-asg.goldprice.org/dbXRates/EUR',
+                name: 'oegussa',
+                url: 'fetch-oegussa-prices.php',
                 parser: (data) => {
-                    if (data && data.items && data.items[0]) {
-                        // Цена в EUR за тройскую унцию
-                        const eurPerOunce = parseFloat(data.items[0].xauPrice);
-                        // Конвертируем в граммы (1 тр. унция = 31.1035 грамм)
-                        const price999 = eurPerOunce / 31.1035;
-                        const price585 = price999 * 0.585;
-                        return { '999': price999, '585': price585 };
-                    }
-                    return null;
-                }
-            },
-            {
-                name: 'nbp',
-                url: 'https://api.nbp.pl/api/cenyzlota/last/1/?format=json',
-                parser: (data) => {
-                    if (data && data[0] && data[0].cena) {
-                        // Цена в PLN за грамм, конвертируем в EUR (примерно 1 PLN = 0.23 EUR)
-                        const pricePLN = parseFloat(data[0].cena);
-                        const price999 = pricePLN * 0.23;
-                        const price585 = price999 * 0.585;
-                        return { '999': price999, '585': price585 };
+                    if (data && data.success && data.prices) {
+                        return {
+                            '999': parseFloat(data.prices['999']),
+                            '585': parseFloat(data.prices['585'])
+                        };
                     }
                     return null;
                 }

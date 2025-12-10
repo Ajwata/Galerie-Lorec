@@ -1765,6 +1765,10 @@ section {
 }
 
 @media (max-width: 768px) {
+  .hero__content {
+    margin-top: 40px;
+  }
+
   .hero__title {
     font-size: 28px;
   }

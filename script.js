@@ -55,7 +55,7 @@ class GoldPriceTracker {
         this.apis = [
             {
                 name: 'oegussa',
-                url: 'fetch-oegussa-prices.php',
+                url: '/api/fetch-oegussa-prices',
                 parser: (data) => {
                     if (data && data.success && data.prices) {
                         return {

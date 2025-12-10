@@ -1,8 +1,7 @@
 {
-  "rewrites": [
-    {
-      "source": "/fetch-oegussa-prices.php",
-      "destination": "/api/fetch-oegussa-prices.php"
+  "functions": {
+    "api/fetch-oegussa-prices.php": {
+      "runtime": "vercel-php@0.7.1"
     }
-  ]
+  }
 }

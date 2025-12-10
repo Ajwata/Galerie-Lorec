@@ -82,10 +82,20 @@ try {
                 '585' => round($price585, 2)
             ],
             'source' => 'oegussa',
-            'timestamp' => date('Y-m-d H:i:s')
+            'timestamp' => date('Y-m-d H:i:s'),
+            'debug' => 'Parsed from HTML'
         ]);
     } else {
         // Не удалось распарсить, используем fallback API
+        echo json_encode([
+            'success' => false,
+            'debug' => [
+                'found_999' => $price999,
+                'found_585' => $price585,
+                'html_length' => strlen($html),
+                'message' => 'Failed to parse Ögussa prices, check patterns'
+            ]
+        ]);
         useFallbackAPI();
     }
     
